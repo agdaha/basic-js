@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * Given two strings, find the number of common characters between them.
@@ -16,19 +16,19 @@ function getCommonCharacterCount(s1, s2) {
   const m2 = new Map();
 
   for (let i = 0; i < s1.length; i++) {
-      if (m1.has(s1.charAt(i))){
-          m1.set(s1.charAt(i), m1.get(s1.charAt(i))+1);
-      } else {
-          m1.set(s1.charAt(i),1);
-      }      
+    if (m1.has(s1.charAt(i))) {
+      m1.set(s1.charAt(i), m1.get(s1.charAt(i)) + 1);
+    } else {
+      m1.set(s1.charAt(i), 1);
+    }
   }
 
   for (let i = 0; i < s2.length; i++) {
-      if (m2.has(s2.charAt(i))){
-          m2.set(s2.charAt(i), m2.get(s2.charAt(i))+1);
-      } else {
-          m2.set(s2.charAt(i),1);
-      }      
+    if (m2.has(s2.charAt(i))) {
+      m2.set(s2.charAt(i), m2.get(s2.charAt(i)) + 1);
+    } else {
+      m2.set(s2.charAt(i), 1);
+    }
   }
 
   let cnt = 0;
@@ -42,5 +42,5 @@ function getCommonCharacterCount(s1, s2) {
 }
 
 module.exports = {
-  getCommonCharacterCount
+  getCommonCharacterCount,
 };
